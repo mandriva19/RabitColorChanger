@@ -6,6 +6,7 @@
 
 body {
     font-family: 'League Gothic', sans-serif;
+    /* position: relative; */
 }
 
 .d-none {
@@ -26,6 +27,28 @@ h1 {
 .header {
     background-color: rgb(135, 143, 158);
     height: 14vh;
+}
+
+
+.timer {
+    position: fixed;
+    border-radius: 50%;
+    content:'ge';
+    background-color: rgb(219, 0, 0);
+    border: solid 5px white; 
+    padding: 40px;
+    top: 70px;
+    bottom: 0;
+    left: 55%;
+    right: 0;
+    width: 3.125rem;
+    height: 2.5rem;
+    opacity: 0.9;
+}
+
+.timer h5 {
+    color: white;
+    text-decoration: underline;
 }
 
 .footer {

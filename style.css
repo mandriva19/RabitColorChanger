@@ -30,7 +30,7 @@ h1 {
 }
 
 
-.timer {
+/* .timer {
     position: fixed;
     border-radius: 50%;
     content:'ge';
@@ -49,7 +49,7 @@ h1 {
 .timer h5 {
     color: white;
     text-decoration: underline;
-}
+} */
 
 .footer {
     position: fixed;

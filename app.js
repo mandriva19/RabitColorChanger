@@ -13,6 +13,7 @@ const colors = ["#da9f64", "#f67dd1", "red", "blue", "white", "cyan", "orange", 
 const colorsff = ["#da9f64", "#f67dd1", "red", "blue", "white", "cyan", "orange", "purple", "yellow", "green", "brown", "gray", "#e0cb9a", "#348704", "#bfff4f", "#c6ecc3", "#a081e2","#c39feb",  "#022504", "#41f635", "#4c856a", "#cedd43", "#041d30", "#9c499f"];
 //create function
 
+//function for click counter
 let ffcounter = document.querySelector('.ffcounter'),
   count = 0;
 ffcounter.onclick = function() {
@@ -20,7 +21,12 @@ ffcounter.onclick = function() {
   counterDisplayArea.innerHTML = count;
 };
 
-//dsfnds
+//play audio on button 
+const audioClick = document.querySelector('.clickAudio')
+function clickSound(){
+  audioClick.play();
+}
+//function for 
 
 btn.addEventListener('click', function(){
     const randomIndex = Math.floor(Math.random() * colors.length);
@@ -28,6 +34,7 @@ btn.addEventListener('click', function(){
     header.style.backgroundColor = randomColor;
     footerText.classList.remove('d-none')
     cnp.classList.remove('d-none')
+    clickSound()
 
 })
 

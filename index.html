@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>ColorChanger</title>
 </head>
 <body>
-     <header class="header">
-        <div class="d-none match-show">
-            <h5>GRATS YOU WON THE CHALLENGE!</h5>
-        </div>
-      </header>
 
+    <!-- main card  -->
     <div class="card-wrapper">
         <div class="card">
             <h1>Did You Know?</h1>
@@ -23,11 +19,34 @@
                 <p class="d-none click-counter-text">click counter: <span class="counter-display">number</span></
         </div>
     </div>
+    <!-- end main card  -->
 
-
+    <!-- footer -->
  <footer class="footer">
     <p class="d-none footer-text">both footer and header colors are randomly generated. the less clicks it takes to match - the better</p>
  </footer>
+     <!-- end footer -->
+ 
+     <!-- winning overlay -->
+    <div class="winning-overlay">
+        <div class="winning-card">
+            <img src="./03.png" alt="medal for winning">
+
+            <h1>congratulations</h1>
+
+            <p>
+            You were able to beat this game. <br>
+
+            Now you can get your prize by visiting this page: 
+            </p>
+
+            <a class="winning-btn" href="#"><span>Collect Your Prize</span></a>
+            <audio class="win-audio" src="./win.ogg"></audio>
+
+            <!-- <p>or continue <strong>playing</strong></p> -->
+        </div>
+    </div>      
+    <!-- end winning overlay -->
 
 
     <script src="./app.js"></script>

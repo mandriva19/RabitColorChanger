@@ -5,6 +5,7 @@ const footer = document.querySelector('.footer')
 const btn = document.querySelector('.btn')
 const footerText = document.querySelector('.footer-text')
 const winningOverlay = document.querySelector('.winning-overlay');
+const winTitle = document.querySelector('.win-title')
 
 //counter display text
 const counterDisplayText = document.querySelector('.click-counter-text')
@@ -20,17 +21,19 @@ const colorsff = ['hsl(234, 92%, 60%)', 'hsl(45, 87%, 50%)', 'hsl(189, 67%, 55%)
 
 
 // FUNCTIONS //////
+
 /* 
 =======================================================
 */
 
 //click counter function for counting click to display 
-let ffcounter = document.querySelector('.ffcounter')
-  count = 0;
-  ffcounter.onclick = function() {
-  count += 1;
-  counterDisplayArea.innerHTML = count;
+ let ffcounter = document.querySelector('.ffcounter')
+   count = 0;
+   ffcounter.onclick = function() {
+   count += 1;
+   counterDisplayArea.innerHTML = count;
 };
+
 
 //play audio on button 
     const audioClick = document.querySelector('.clickAudio')
@@ -52,6 +55,11 @@ function changeColorff() {
   footer.style.backgroundColor = randomColorff;
 }
 
+//show winning overlay on delay function
+let showWinningOverlayDelay = () => {
+  winningOverlay.classList.add('winning-show');
+}
+
 //function for comparing if colors are matching
 
 function checkColorMatch() {
@@ -59,16 +67,14 @@ function checkColorMatch() {
   const footerColor = footer.style.backgroundColor;
 
   if (headerColor === footerColor) {
-    // Colors match, run your function here
-    console.log("You win the game!");
     //show winning overlay
-    winningOverlay.classList.add('winning-show');
+    setTimeout(showWinningOverlayDelay, 3000);
     //play winning audio
     const winAudio = document.querySelector('.win-audio');
     winAudio.play();
-  } else {
-    console.log("Click more...");
-  }
+    //hide changer btn 
+    btn.classList.add('d-none')
+  } 
 }
 
 
@@ -78,11 +84,10 @@ btn.addEventListener('click', function(){
     footerText.classList.remove('d-none')
     //show click counter
     counterDisplayText.classList.remove('d-none')
-    //add functions inside click event
+    //run functions fropm click event
     changeColor()
     changeColorff()
     clickSound()
     checkColorMatch()
 })
-
 

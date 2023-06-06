@@ -4,8 +4,9 @@ const header = document.querySelector('.header')
 const footer = document.querySelector('.footer')
 const btn = document.querySelector('.btn')
 const footerText = document.querySelector('.footer-text')
-const winningOverlay = document.querySelector('.winning-overlay');
+const winningOverlay = document.querySelector('.winning-overlay')
 const winTitle = document.querySelector('.win-title')
+const winningBtn = document.querySelector('.winning-btn')
 
 //counter display text
 const counterDisplayText = document.querySelector('.click-counter-text')
@@ -91,3 +92,8 @@ btn.addEventListener('click', function(){
     checkColorMatch()
 })
 
+
+//reload page on clicking win-btn
+winningBtn.addEventListener('click', function(){
+  location.reload();
+})

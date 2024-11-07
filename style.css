@@ -18,8 +18,15 @@ body {
 
 h1 {
     margin-top: .5375rem;
-    color: rgb(246, 163, 163);
+    color: rgb(255, 255, 255);
+    padding: 2px;
     position: relative;
+}
+
+h2 {
+    color:rgb(206, 29, 29);
+    font-size: 28px;
+    margin-bottom: .5rem;
 }
 
 p {
@@ -29,6 +36,9 @@ p {
 
 .header {
 /*    background-color: var(--bg-box);*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 14vh;
 }
 
